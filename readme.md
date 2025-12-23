@@ -14,7 +14,7 @@
 
 ## 🏗 System Architecture
 
-The pipeline follows a modular micro-service architecture wrapped in a containerized environment:
+The pipeline follows a modular micro-service architecture wrapped in a containerized environment. It decouples the generative logic from the video rendering engine to ensure scalability.
 
 ```mermaid
 graph TD

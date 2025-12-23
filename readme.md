@@ -128,4 +128,4 @@ docker run \-it \-p 7860:7860 \--env-file .env autostream-app
 
 ### **Author**
 
-**Shubhankar Rawat** *AI Engineer & Researcher* [LinkedIn](https://www.google.com/search?q=https://linkedin.com/in/shubhankar-rawat) | [Portfolio](https://www.google.com/search?q=https://shubhankarrawat.github.io)
+**Shubhankar Rawat** *AI Engineer & Researcher* [LinkedIn]([https://www.google.com/search?q=https://linkedin.com/in/shubhankar-rawat](https://www.linkedin.com/in/shubhankarrawat/?originalSubdomain=au))

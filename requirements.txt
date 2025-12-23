@@ -1,0 +1,12 @@
+edge-tts
+vosk
+pyautogui
+gradio
+opencv-python==4.10.0.84
+moviepy==1.0.3
+google-genai
+git+https://github.com/m-bain/whisperX.git@v3.4.2#egg=whisperx
+torch==2.5.1
+torchaudio==2.5.1
+torchvision==0.20.1
+

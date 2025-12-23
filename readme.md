@@ -21,9 +21,9 @@ graph TD
     User[User Input] -->|Topic & Style| Orchestrator[App Orchestrator]
     
     subgraph "Content Generation Layer"
-        Orchestrator -->|Prompt| LLM[LLM Service (Groq/Llama3)]
-        LLM -->|Script| TTS[TTS Service (EdgeTTS)]
-        LLM -->|Visual Prompts| IMG[Image Service (SDXL Flash)]
+        Orchestrator -->|Prompt| LLM["LLM Service (Groq/Llama3)"]
+        LLM -->|Script| TTS["TTS Service (EdgeTTS)"]
+        LLM -->|Visual Prompts| IMG["Image Service (SDXL Flash)"]
     end
     
     subgraph "Processing Layer"

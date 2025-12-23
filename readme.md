@@ -21,7 +21,7 @@ graph TD
     User[User Input] -->|Topic & Style| Orchestrator[App Orchestrator]
     
     subgraph "Content Generation Layer"
-        Orchestrator -->|Prompt| LLM["LLM Service (Groq/Llama3)"]
+        Orchestrator -->|Prompt| LLM["LLM Service (gemini)"]
         LLM -->|Script| TTS["TTS Service (EdgeTTS)"]
         LLM -->|Visual Prompts| IMG["Image Service (SDXL Flash)"]
     end
@@ -45,7 +45,7 @@ graph TD
 ## 🚀 Key Engineering Features
 
 ### 1. High-Performance Inference & Latency Optimization
-- **LLM Engine:** Utilizes **Groq API** with `Llama-3-70B` to achieve sub-second script generation, significantly reducing the "Time to First Token."
+- **LLM Engine:** Utilizes **gemini API** with `gemini` to achieve sub-second script generation, significantly reducing the "Time to First Token."
 - **Visual Synthesis:** Implements **SDXL-Flash** via the Hugging Face Inference Client. This model was selected for its ability to generate high-fidelity images in <8 steps, optimized for T4 GPU execution.
 - **Redundancy:** Includes a fallback image generation service (`pollinations.py`) to ensure pipeline stability if the primary inference API is rate-limited.
 
@@ -67,7 +67,7 @@ graph TD
 ├── Dockerfile              # Container definition with OS dependencies
 ├── app.py                  # Gradio UI & Application Entry Point
 ├── services/               # Microservices Logic
-│   ├── genai_service.py    # LLM Interaction (Groq)
+│   ├── genai_service.py    # LLM Interaction (Gemini)
 │   ├── speech_service.py   # TTS Generation (EdgeTTS)
 │   ├── video_service.py    # Video Compositing (MoviePy)
 │   ├── whisperx_service.py # Audio Alignment (WhisperX)
@@ -90,7 +90,7 @@ graph TD
 | Component | Technology | Rationale |
 | :--- | :--- | :--- |
 | **Orchestration** | Python 3.10, Gradio | Rapid UI prototyping and async capability. |
-| **Scripting** | Groq (Llama 3) | Lowest latency LLM for real-time generation. |
+| **Scripting** | gemini | Lowest latency LLM for real-time generation. |
 | **Audio** | EdgeTTS | Natural sounding neural voices with zero latency. |
 | **Alignment** | WhisperX | State-of-the-art forced alignment for accurate subtitles. |
 | **Visuals** | SDXL Flash | High-speed diffusion models optimized for T4 GPUs. |
@@ -125,7 +125,7 @@ pip install -r requirements.txt
 Create a `.env` file in the root directory:
 ```bash
 HF_TOKEN=your_huggingface_token_here
-GROQ_API_KEY=your_groq_api_key_here
+gemini_API_KEY=your_gemini_api_key_here
 ```
 
 **5. Run the App**

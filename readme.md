@@ -104,15 +104,13 @@ To run this pipeline locally, you must have `ffmpeg` and `imagemagick` installed
 
 **1. Clone the Repository**
 ```bash
-git clone [https://github.com/YourUsername/AutoStream.git](https://github.com/YourUsername/AutoStream.git)
-cd AutoStream
+git clone https://github.com/ShubhankarRawat/TTV-App-V1.git
+cd TTV-App-V1
 ```
 
 **2. System Dependencies (Ubuntu/Debian)**
 ```bash
 sudo apt-get update && sudo apt-get install ffmpeg imagemagick ghostscript
-# Fix ImageMagick policy for text rendering
-sudo sed -i 's/none/read,write/g' /etc/ImageMagick-6/policy.xml
 ```
 
 **3. Install Python Dependencies**
